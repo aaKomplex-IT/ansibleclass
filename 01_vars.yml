@@ -15,12 +15,11 @@
             name: "{{ package }}"
             state: latest
 
-
       - name: Enable httpd service
         ansible.builtin.systemd:
-          name: httpd
-          state: started
-          enabled: true
+            name: httpd
+            state: started
+            enabled: true
         register: httpd_status
 
       - name: Show Status
