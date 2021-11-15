@@ -12,8 +12,8 @@
   tasks:
       - name: Install Packages
         ansible.builtin.package:
-          name: "{{ package }}"
-          state: latest
+            name: "{{ package }}"
+            state: latest
 
 
       - name: Enable httpd service
