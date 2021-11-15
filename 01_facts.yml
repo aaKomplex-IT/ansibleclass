@@ -7,5 +7,5 @@
       msg: "{{ ansible_facts }}"
 
   - name: Debug Facts Hostname - Unsafe Text
-    ansible.bultin.debug:
+    ansible.builtin.debug:
       msg: "{{ ansible_facts['nodename'] }}"
