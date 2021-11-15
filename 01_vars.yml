@@ -24,19 +24,19 @@
 
       - name: Show Status
         debug:
-          var: httpd_status
+            var: httpd_status
 
       - name: Is httpd running
         debug:
-          msg: httpd is running
+            msg: httpd is running
         when: httpd_status.state == "started"
 
       - name: Configure firewall
         ansible.posix.firewalld:
-          zone: public
-          service: http
-          permanent: true
-          state: enabled
+            zone: public
+            service: http
+            permanent: true
+            state: enabled
         notify: firewall reload
 
   handlers:
